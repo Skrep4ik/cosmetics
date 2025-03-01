@@ -1,0 +1,17 @@
+.nav__menu-btn button {
+  color: var(--white);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.nav__menu-btn .nav__login {
+  padding: 10px 40px;
+  border: 1px solid var(--white);
+  border-radius: 100px;
+  transition: 300ms linear;
+}
+
+.nav__menu-btn .nav__login:hover {
+  background: #ffffff53;
+  backdrop-filter: blur(5px);
+}

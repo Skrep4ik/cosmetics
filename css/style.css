@@ -1,0 +1,512 @@
+:root {
+  --yellow_tint: #FEFEF2;
+  --black: #000;
+  --white: #fff;
+}
+
+[class *="__container"] {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+[class *="__subtitle"] {
+  font-size: 36px;
+}
+
+.wrapper {
+  background: var(--yellow_tint);
+}
+
+.hero__block {
+  height: 100vh;
+  background: url(../img/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__block-text {
+  width: 650px;
+  text-align: center;
+
+  .title {
+    font-size: 96px;
+    font-weight: normal;
+    color: var(--white);
+  }
+}
+
+.shop__btn {
+  text-transform: capitalize;
+  color: var(--white);
+  padding: 10px 40px;
+  border: 1px solid var(--white);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 300ms linear;
+
+  &:hover {
+    background: #ffffff65;
+    backdrop-filter: blur(5px);
+  }
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.product__section-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.show__all-btn {
+  padding: 10px 40px;
+  border: 1px solid #000;
+  text-transform: capitalize;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+  text-align: center;
+  height: 500px;
+  border: 1px solid #000;
+  border-right: none;
+  padding-top: 30px;
+
+  position: relative;
+  img {
+    height: 400px;
+  }
+}
+
+/* скролл */
+
+/* Для всього сайту */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Ширина скролу */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+  /* Колір скролу */
+  border-radius: 4px;
+  /* Закруглення країв */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+  /* Колір скролу при наведенні */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  /* Колір фону скролу */
+  border-radius: 4px;
+  /* Закруглення країв */
+}
+
+
+/* lab section start */
+
+.lab-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.lab__item {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .lab__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-left: 1px solid #000;
+  }
+}
+
+.lab__item-block {
+  width: 554px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .show__all-btn {
+    margin: 0 auto;
+  }
+}
+
+.parsley-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  text-align: center;
+  border-top: 1px solid #000;
+}
+
+.parsley-item {
+  width: 650px;
+}
+
+.parsley__subtitle-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.parsley__subtitle-block {
+  span {
+    &:first-child {
+      margin-right: -20px;
+    }
+
+    &:last-child {
+      margin-left: -20px;
+    }
+  }
+}
+
+.parsley__img {
+  width: 100px;
+}
+
+.parsley__description {
+  margin-bottom: 20px;
+}
+
+.marquee {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: var(--black);
+  margin-top: 50px;
+  color: var(--white);
+}
+
+.marquee div {
+  display: flex;
+  width: 200%;
+  gap: 40px;
+  position: absolute;
+
+  animation: marquee 15s linear infinite;
+
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.marquee span {
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+.about__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 600px 340px 600px 400px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about-intro-left about-intro-left about-intro-left about-intro-right about-intro-right about-intro-right"
+    "about-central about-central about-central about-central about-central about-central"
+    "about-products about-products about-products about-quote about-quote about-quote"
+    "about-communication about-communication about-communication about-email about-email about-email";
+}
+
+.about-intro-left {
+  grid-area: about-intro-left;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-intro {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-intro-right {
+  grid-area: about-intro-right;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-intro-text__right {
+  width: 420px;
+  font-size: 32px;
+}
+
+.about-central {
+  grid-area: about-central;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.about-central__subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  width: 760px;
+  text-align: center;
+
+}
+
+.about-products {
+  grid-area: about-products;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  background: url(../img/about-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-quote {
+  grid-area: about-quote;
+  border-bottom: 1px solid #000;
+}
+
+.about-communication {
+  grid-area: about-communication;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.about-email {
+  grid-area: about-email;
+  border-bottom: 1px solid #000;
+}
+
+.about-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-quote__block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 480px;
+}
+
+.about-quote__description {
+  font-size: 36px;
+}
+
+.about-communication,
+.about-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-communication__subtitle {
+  width: 480px;
+}
+
+.about-email {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.email {
+  position: relative;
+  width: 500px;
+  height: 50px;
+}
+
+.email-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 20px;
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* -------- catalog page start -------- */
+
+#cleanse,
+#exfoliate,
+#eyes-lips,
+#hydrate,
+#shave,
+#sun-care,
+#tone {
+  display: none;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.product-category {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.product-category.active {
+  background-color: black;
+  color: white;
+}
+
+.content-section {
+  display: none;
+}
+
+.product-header {
+  font-size: 36px;
+}
+
+.product-categories {
+  display: flex;
+}
+
+.product-category {
+  padding: 10px 40px;
+  border: 1px solid #000;
+}
+
+.product-category:not(:last-child) {
+  border-right: none;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 500px);
+  gap: 0px 0px;
+  /* margin-bottom: 200px; */
+  /* margin-top: 100px; */
+  grid-auto-flow: row;
+  grid-template-areas:
+    "product-card__01 product-card__02 featured-block featured-block"
+    "product-card__03 product-card__04 product-card__05 product-card__06"
+    "featured-block__02 featured-block__02 product-card__07 product-card__08"
+    "product-card__09 product-card__10 product-card__11 product-card__12";
+}
+
+.product-card__01 {
+  grid-area: product-card__01;
+  border-bottom: none;
+}
+
+.product-card__02 {
+  grid-area: product-card__02;
+  border-bottom: none;
+}
+
+.product-card__03 {
+  grid-area: product-card__03;
+}
+
+.product-card__04 {
+  grid-area: product-card__04;
+}
+
+.product-card__05 {
+  grid-area: product-card__05;
+  border-bottom: none;
+}
+
+.product-card__06 {
+  grid-area: product-card__06;
+  border-bottom: none;
+}
+
+.featured-block {
+  grid-area: featured-block;
+}
+
+.featured-block__02 {
+  grid-area: featured-block__02;
+  border-bottom: none;
+}
+
+.product-card__07 {
+  grid-area: product-card__07;
+  border-bottom: none;
+}
+
+.product-card__08 {
+  grid-area: product-card__08;
+  border-bottom: none;
+}
+
+.product-card__09 {
+  grid-area: product-card__09;
+}
+
+.product-card__10 {
+  grid-area: product-card__10;
+}
+
+.product-card__11 {
+  grid-area: product-card__11;
+}
+
+.product-card__12 {
+  grid-area: product-card__12;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
