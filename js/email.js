@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const emailInput = document.querySelector('.email-input');
-    const emailLabel = document.querySelector('email');
+    const emailLabel = document.querySelector('.email');
     emailInput.addEventListener('input', function() {
         const emailValue = emailInput.value;
 

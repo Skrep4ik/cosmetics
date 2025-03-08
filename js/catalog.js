@@ -1,7 +1,7 @@
 document.querySelectorAll(".product-category").forEach((category) => {
     category.addEventListener("click", () => {
         
-        document.querySelectorAll("/product-category").forEach((item) => {
+        document.querySelectorAll(".product-category").forEach((item) => {
             item.classList.remove("active");
         });
 
